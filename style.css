@@ -588,10 +588,11 @@ a.bold:hover {
 
   .contact {
     display: flex;
+    justify-content: center;
     align-items:first baseline;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 40px 65px;
+    /* padding: 40px 65px; */
     margin: 0 40px;
   }
 
