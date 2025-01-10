@@ -177,18 +177,22 @@ nav{
 
 .captions{
     display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
     gap:10px;
 }
 
 .reactions{
     display:flex;
     justify-content: space-between;
+    align-items:start;
     gap:10px;
 }
 
 .reactions>div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap:5px;
 }
 
@@ -200,6 +204,11 @@ nav{
 
   a.bold:hover{
     text-decoration: underline;
+  }
+
+  .texts{
+    display: flex;
+    flex-direction: column;
   }
 
   .texts>a{
@@ -226,11 +235,13 @@ nav{
   .signin p{
     font-weight:bold;
     font-size: 14px;
+    text-align: center;
   }
 
   .socialmedia{
     display: flex;
     gap:10px;
+    justify-content: center;
     align-items: center;
     margin:10px;
   }
@@ -281,6 +292,10 @@ nav{
     font-size: 16px;
   }
 
+  #hidden{
+    display: none;
+  }
+
   /* styling the horizontal line */
   .horizontal-line{
     height: 4px;
@@ -320,8 +335,22 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     align-items: first baseline;
-    gap:10px;
+    gap:40px;
     padding:60px 30px;
+    
+  }
+
+  .moreinfosubcolumns{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
+    align-items: first baseline;
+    flex:0.5px;
+    gap: 30px;
+    margin-left: 100px ;
+    
+    font-size: 10px;
+    letter-spacing: 0.5px;
   }
 
   .moreinfo-columns{
@@ -329,8 +358,8 @@ nav{
     flex-direction: column;
     align-items: first baseline;
     justify-content: space-evenly;
-    gap:20px;
-    padding:60px;
+    gap:15px;
+    padding:60px 0;
   }
 
   .moreinfo-columns a{
@@ -340,29 +369,39 @@ nav{
     font-weight: 400px;
   }
 
+  .moreinfo-columns a:hover{
+    text-decoration: underline;
+  }
+
   #footer{
     background: #959595;
-    margin: 0 60px;
+    margin: 0 40px;
   }
 
   .rights{
     display: flex;
     flex-direction: row;
-    justify-content: start;
     align-items: center;
-    gap:10px;
+    gap:30px;
     padding-top:20px;
-    margin:0 60px;
+    margin:0 40px;
     font-size:13px;
     font-weight: bold;
   }
 
   .contact{
     display: flex;
+    align-items: center;
+    gap:20px;
+    padding: 40px;
+    margin:0 40px;
+  }
+
+  .privacy, .cookies{
+    display: flex;
     justify-content: center;
     align-items: center;
     gap:20px;
-    padding:30px;
     font-size:13px;
     font-weight: bold;
   }
@@ -373,7 +412,7 @@ nav{
   }
 
 
-  @media screen and (max-width:1025px) {
+  @media screen and (max-width:770px) {
     .fa-bars, .fa-behance{
        display: inline; 
     }
@@ -404,15 +443,70 @@ nav{
     .photos{
         margin:15px;
         display:grid;
-        grid-template-columns:repeat(3, 1fr);
+        grid-template-columns:repeat(2, 1fr);
         gap:20px;
         color:rgb(25, 25, 25);
         line-height: 22px;
         font-size:16px;
+    
       }
+
+      .bottom-footer{
+        text-align: center;
+      }
+      
+      .moreinfo{
+        display: block;
+        margin:0px;
+      }
+      
+
+      .moreinfosubcolumns{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: space-between;
+        align-items: first baseline;
+        flex:0.5px;
+        gap: 30px;
+        margin-left:0px ;
+        
+      }
+    
+      .moreinfo-columns{
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; */
+      }
+
+      .rights{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+      }
+
+      .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+      }
+
+      .cookies{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:20px
+      }
+      
+
   }
 
-@media  screen and (max-width:770px) {
+@media  screen and (max-width:475px) {
     
 
 
@@ -450,11 +544,6 @@ nav{
         line-height: 22px;
         font-size:16px;
       }
-
-      .captions{
-        
-        
-      }
     
       .reactions{
         
@@ -462,6 +551,45 @@ nav{
        font-size: 10px;
        font-family:Helvetica 'Arial Narrow Bold', sans-serif;
        
+      }
+
+      .signin button{
+        display: none;
+      }
+
+      #hidden{
+        display: block;
+      }
+
+      .socialmedia span{
+        display: none;
+      }
+
+      .moreinfo{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .moreinfo-columns{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap:20px;
+        padding:60px 0;
+      }
+
+      .moreinfosubcolumns{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+       
+        font-size: 10px;
+      }
+      .rights{
+        font-size: 10px;
       }
 
 }
